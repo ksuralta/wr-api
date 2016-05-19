@@ -11,7 +11,7 @@ module.exports = {
      * produces: 
      */
     get: function listPets(req, res) {
-        res.sendStatus(501);
+        res.status(200).json({message:'hello there!'});
     }, 
     
     /**
