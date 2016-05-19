@@ -17,6 +17,8 @@ app.use(swaggerize({
     handlers: path.resolve('./handlers')
 }));
 
-server.listen(8000, function () {
+app.set('port', (process.env.PORT || 8000));
+
+server.listen(app.get('port'), function () {
     app.swagger.api.host = server.address().address + ':' + server.address().port;
 });
